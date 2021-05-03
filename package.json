@@ -5,11 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "report": "npm_config_report=true npm run build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ali-oss": "^6.15.2",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "element-ui": "^2.15.1",
+    "jsonlint": "^1.6.3",
+    "monaco-editor": "^0.23.0",
+    "script-loader": "^0.7.2",
+    "uuid": "^8.3.2",
+    "vue": "^2.6.10",
+    "vue-codemirror": "^4.0.6",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.0",
@@ -18,6 +27,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "monaco-editor-webpack-plugin": "^3.0.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
