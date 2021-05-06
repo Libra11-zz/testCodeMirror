@@ -113,7 +113,7 @@ export default {
     loadConfig() {
       var list = []
       for (const i in this.config) {
-        const lang = this.langList.filter(e => e.languageId == this.config[i].languageId)
+        const lang = this.langList.filter(e => e.languageId === this.config[i].languageId)
         if (this.config[i].template) {
           lang[0].template = this.config[i].template
         }
@@ -166,7 +166,7 @@ export default {
     langChanged() {
       const monacoEditor = this.monacoEditor
       this.langList.forEach((l) => {
-        if (l.languageId == this.langIdSelected) {
+        if (l.languageId === this.langIdSelected) {
           monacoEditor.setValue(l.template)
           monaco.editor.setModelLanguage(monacoEditor.getModel(), l.language)
         }
