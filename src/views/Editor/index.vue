@@ -54,7 +54,7 @@
   </div>
 </template>
 <script>
-// 使用时需要根据CodeMirrorEditor.vue 的实际存放路径，调整from后面的组件路径，以便正确引用
+// 使用时需要根据CodeMirrorEditor.vue  的实际存放路径，调整from后面的组件路径，以便正确引用
 import CodeMirrorEditor from '../../components/Editor'
 export default {
   components: {
