@@ -1,7 +1,7 @@
 <template>
   <div class="code-mirror-div">
     <div class="tool-bar">
-      <span>请选择主题</span>
+      <span>选择主题</span>
       <el-select
         v-model="cmTheme"
         placeholder="请选择"
