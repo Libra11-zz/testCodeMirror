@@ -1,7 +1,7 @@
 /*
  * @Author: Libra
  * @Date: 2021-04-29 14:59:31
- * @LastEditTime: 2021-04-30 16:19:45
+ * @LastEditTime: 2021-05-06 15:05:27
  * @LastEditors: Libra
  * @Description:路由页面
  * @FilePath: /interview-vue/src/router/index.js
@@ -12,6 +12,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Home')
+  },
   {
     path: '/ossUpload',
     name: 'OssUpload',
