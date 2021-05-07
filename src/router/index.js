@@ -1,7 +1,7 @@
 /*
  * @Author: Libra
  * @Date: 2021-04-29 14:59:31
- * @LastEditTime: 2021-05-06 15:05:27
+ * @LastEditTime: 2021-05-06 15:55:39
  * @LastEditors: Libra
  * @Description:路由页面
  * @FilePath: /interview-vue/src/router/index.js
@@ -31,6 +31,11 @@ const routes = [
     path: '/monacoEditor',
     name: 'MonacoEditor',
     component: () => import(/* webpackChunkName: "about" */ '../views/MonacoEditor')
+  },
+  {
+    path: '/playOssVideo',
+    name: 'PlayOssVideo',
+    component: () => import(/* webpackChunkName: "about" */ '../views/PlayOssVideo')
   }
 ]
 
