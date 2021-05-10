@@ -1,7 +1,7 @@
 /*
  * @Author: Libra
  * @Date: 2021-04-29 14:59:31
- * @LastEditTime: 2021-05-06 15:55:39
+ * @LastEditTime: 2021-05-09 20:42:01
  * @LastEditors: Libra
  * @Description:路由页面
  * @FilePath: /interview-vue/src/router/index.js
@@ -36,6 +36,11 @@ const routes = [
     path: '/playOssVideo',
     name: 'PlayOssVideo',
     component: () => import(/* webpackChunkName: "about" */ '../views/PlayOssVideo')
+  },
+  {
+    path: '/collaborative',
+    name: 'Collaborative',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Collaborative')
   }
 ]
 
