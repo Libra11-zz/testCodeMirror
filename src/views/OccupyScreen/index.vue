@@ -1,7 +1,7 @@
 <!--
  * @Author: Libra
  * @Date: 2021-05-11 09:36:07
- * @LastEditTime: 2021-05-11 09:45:37
+ * @LastEditTime: 2021-05-11 10:04:55
  * @LastEditors: Libra
  * @Description:霸屏测试
  * @FilePath: /interview-vue/src/views/OccupyScreen/index.vue
@@ -44,6 +44,9 @@ export default {
       }
     },
     handleVisibilityChange() {
+      window.onblur = function() {
+        this.$message.error('不要点击我以外的应用')
+      }
       if (document[this.hidden]) {
         this.$message.error('请注意，你刚才离开了页面！！！')
       } else {
