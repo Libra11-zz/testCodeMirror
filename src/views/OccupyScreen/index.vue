@@ -1,7 +1,7 @@
 <!--
  * @Author: Libra
  * @Date: 2021-05-11 09:36:07
- * @LastEditTime: 2021-05-11 10:36:10
+ * @LastEditTime: 2021-05-11 11:26:52
  * @LastEditors: Libra
  * @Description:霸屏测试
  * @FilePath: /interview-vue/src/views/OccupyScreen/index.vue
@@ -24,6 +24,9 @@ export default {
   created() {
     this.init()
   },
+  beforeDestroy() {
+    document.removeEventListener(this.visibilityChange)
+  },
   methods: {
     init() {
       if (typeof document.hidden !== 'undefined') { // Opera 12.10 and Firefox 18 and later support
@@ -36,15 +39,6 @@ export default {
         this.hidden = 'webkitHidden'
         this.visibilityChange = 'webkitvisibilitychange'
       }
-      // 如果浏览器不支持addEventListener 或 Page Visibility API 给出警告
-      if (typeof document.addEventListener === 'undefined' || typeof document[this.hidden] === 'undefined') {
-        console.log('This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.')
-      } else {
-        // 处理页面可见属性的改变
-        document.addEventListener(this.visibilityChange, this.handleVisibilityChange, false)
-      }
-    },
-    handleVisibilityChange() {
       const _this = this
       window.onblur = function() {
         // this.$alert('这是一段内容', '标题名称', {
@@ -69,6 +63,15 @@ export default {
           _this.isBlur = true
         }
       }
+      // 如果浏览器不支持addEventListener 或 Page Visibility API 给出警告
+      if (typeof document.addEventListener === 'undefined' || typeof document[this.hidden] === 'undefined') {
+        console.log('This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.')
+      } else {
+        // 处理页面可见属性的改变
+        document.addEventListener(this.visibilityChange, this.handleVisibilityChange, false)
+      }
+    },
+    handleVisibilityChange() {
       if (document[this.hidden]) {
         this.$message.error('请注意，你刚才离开了页面！！！')
       } else {

@@ -1,7 +1,7 @@
 /*
  * @Author: Libra
  * @Date: 2021-04-29 14:59:31
- * @LastEditTime: 2021-05-11 09:40:44
+ * @LastEditTime: 2021-05-11 13:11:42
  * @LastEditors: Libra
  * @Description:路由页面
  * @FilePath: /interview-vue/src/router/index.js
@@ -46,6 +46,11 @@ const routes = [
     path: '/occupyScreen',
     name: 'OccupyScreen',
     component: () => import(/* webpackChunkName: "about" */ '../views/OccupyScreen')
+  },
+  {
+    path: '/broswerFullscreen',
+    name: 'BroswerFullscreen',
+    component: () => import(/* webpackChunkName: "about" */ '../views/BroswerFullscreen')
   }
 ]
 
