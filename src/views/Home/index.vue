@@ -1,7 +1,7 @@
 <!--
  * @Author: Libra
  * @Date: 2021-05-06 15:04:06
- * @LastEditTime: 2021-05-07 15:41:47
+ * @LastEditTime: 2021-05-11 09:47:57
  * @LastEditors: Libra
  * @Description:Home
  * @FilePath: /interview-vue/src/views/Home/index.vue
@@ -9,10 +9,12 @@
 <template>
   <div class="container">
     <div class="box">
-      <router-link to="/editor">editor</router-link>
-      <router-link to="/playOssVideo">PlayOssVideo</router-link>
-      <router-link to="/ossUpload">oss</router-link>
-      <router-link to="/monacoEditor">monacoEditor</router-link>
+      <router-link class="link" to="/editor">editor</router-link>
+      <router-link class="link" to="/playOssVideo">PlayOssVideo</router-link>
+      <router-link class="link" to="/ossUpload">oss</router-link>
+      <router-link class="link" to="/monacoEditor">monacoEditor</router-link>
+      <router-link class="link" to="/collaborative">collaborative</router-link>
+      <router-link class="link" to="/occupyScreen">occupyScreen</router-link>
     </div>
   </div>
 </template>
@@ -30,11 +32,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 24px;
   }
-  .box{
-    width: 640px;
-    height: 483px;
-    background-color: #000;
-    color: white;
+  .link{
+    display: block;
   }
 </style>
