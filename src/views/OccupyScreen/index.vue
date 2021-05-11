@@ -1,7 +1,7 @@
 <!--
  * @Author: Libra
  * @Date: 2021-05-11 09:36:07
- * @LastEditTime: 2021-05-11 10:04:55
+ * @LastEditTime: 2021-05-11 10:36:10
  * @LastEditors: Libra
  * @Description:霸屏测试
  * @FilePath: /interview-vue/src/views/OccupyScreen/index.vue
@@ -17,7 +17,8 @@ export default {
   data() {
     return {
       visibilityChange: '',
-      hidden: ''
+      hidden: '',
+      isBlur: true
     }
   },
   created() {
@@ -44,8 +45,29 @@ export default {
       }
     },
     handleVisibilityChange() {
+      const _this = this
       window.onblur = function() {
-        this.$message.error('不要点击我以外的应用')
+        // this.$alert('这是一段内容', '标题名称', {
+        //   confirmButtonText: '确定',
+        //   callback: action => {
+        //     this.$message({
+        //       type: 'info',
+        //       message: `action: ${action}`
+        //     })
+        //   }
+        // })
+        // this.$message.error('不要点击我以外的应用')
+        // console.log('不要点击我以外的应用')
+        // alert('不要点击我以外的应用')
+        _this.isBlur = false
+      }
+      window.onfocus = function() {
+        console.log('blur')
+        console.log(_this.isBlur)
+        if (!_this.isBlur) {
+          _this.$message.error('不要点击我以外的应用')
+          _this.isBlur = true
+        }
       }
       if (document[this.hidden]) {
         this.$message.error('请注意，你刚才离开了页面！！！')
