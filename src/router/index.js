@@ -1,10 +1,10 @@
 /*
  * @Author: Libra
  * @Date: 2021-04-29 14:59:31
- * @LastEditTime: 2021-05-11 13:11:42
+ * @LastEditTime: 2021-10-20 17:42:03
  * @LastEditors: Libra
  * @Description:路由页面
- * @FilePath: /interview-vue/src/router/index.js
+ * @FilePath: /testCodeMirror/src/router/index.js
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -20,7 +20,8 @@ const routes = [
   {
     path: '/ossUpload',
     name: 'OssUpload',
-    component: () => import(/* webpackChunkName: "about" */ '../views/OssUpload')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/OssUpload')
   },
   {
     path: '/editor',
@@ -30,27 +31,44 @@ const routes = [
   {
     path: '/monacoEditor',
     name: 'MonacoEditor',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MonacoEditor')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/MonacoEditor')
   },
   {
     path: '/playOssVideo',
     name: 'PlayOssVideo',
-    component: () => import(/* webpackChunkName: "about" */ '../views/PlayOssVideo')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/PlayOssVideo')
   },
   {
     path: '/collaborative',
     name: 'Collaborative',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Collaborative')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/Collaborative')
   },
   {
     path: '/occupyScreen',
     name: 'OccupyScreen',
-    component: () => import(/* webpackChunkName: "about" */ '../views/OccupyScreen')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/OccupyScreen')
   },
   {
     path: '/broswerFullscreen',
     name: 'BroswerFullscreen',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BroswerFullscreen')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/BroswerFullscreen')
+  },
+  {
+    path: '/videoToGif',
+    name: 'VideoToGif',
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/VideoToGif')
+  },
+  {
+    path: '/yCodeMirror',
+    name: 'yCodeMirror',
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/YCodeMirror')
   }
 ]
 
@@ -61,4 +79,3 @@ const router = new VueRouter({
 })
 
 export default router
-

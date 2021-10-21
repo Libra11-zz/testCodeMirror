@@ -62,19 +62,19 @@ export default {
     codemirror
   },
   props: {
-    'cmTheme': {
+    cmTheme: {
       type: String,
       default: 'default'
     },
-    'cmMode': {
+    cmMode: {
       type: String,
       default: 'default'
     },
-    'autoFormatJson': {
+    autoFormatJson: {
       type: Boolean,
       default: null
     },
-    'jsonIndentation': {
+    jsonIndentation: {
       type: Number,
       default: null
     }
